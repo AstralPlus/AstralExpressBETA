@@ -12,19 +12,12 @@ app.geometry("355x255")
 app.resizable(True, False)
 
 app.wm_iconbitmap(os.path.join(current_dir, 'astral.ico'))
-set_default_color_theme("blue")
 app.wm_title("Astral Express for Star Rail 2.2 Beta")
+set_default_color_theme("blue")
 
 tabview = CTkTabview(master=app)
 tabview.pack(padx=0, pady=0)
 tabview.add("Server")
-
-launch_game = tk.BooleanVar()
-game_path = tk.StringVar()
-close_game_on_exit = tk.BooleanVar()
-launch_delay = tk.IntVar()
-script_dir = os.path.dirname(os.path.realpath(__file__))
-lunarcore_dir = os.path.join(script_dir, "..", "LunarCore")
 
 def start():
     gameserver_exe = os.path.join(current_dir, "../RobinSR/gameserver/gameserver.exe")
