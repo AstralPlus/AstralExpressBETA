@@ -26,8 +26,11 @@ launch_delay = tk.IntVar()
 script_dir = os.path.dirname(os.path.realpath(__file__))
 lunarcore_dir = os.path.join(script_dir, "..", "LunarCore")
 
-def start():    
-    TEMP
+def start():
+    gameserver_exe = os.path.join(current_dir, "../RobinSR/gameserver/gameserver.exe")
+    sdkserver_exe = os.path.join(current_dir, "../RobinSR/sdkserver/sdkserver.exe")
+    subprocess.Popen(["start", gameserver_exe], shell=True)
+    subprocess.Popen(["start", sdkserver_exe], shell=True)
 
 def patch():
     try:        
